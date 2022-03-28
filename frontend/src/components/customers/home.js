@@ -20,6 +20,17 @@ export default function Home(props) {
             <br/>
             <span>Story Books</span>
          </div>
+
+         <div className="col">
+             <img src={'../images/book2.jpg'} className="img-fluid" alt="Responsive "/>
+             <br/>
+             <span>Story Books</span>
+         </div>
+         <div className="col">
+             <img src={'../images/book2.jpg'} className="img-fluid" alt="Responsive "/>
+             <br/>
+             <span>Story Books</span>
+         </div>
          <div className="col">
              <img  src = {'../images/book3.jpg'}  class="img-fluid" alt="Responsive "/>
              <br/>
