@@ -25,11 +25,14 @@ export default function Home(props) {
              <br/>
             <span>Articles</span>
          </div>
+         <p>Read whatever you like whenever you like</p><br/><br/><br/>
+         <p>Read whatever you like whenever you like</p><br/><br/><br/>
          <div className="col">
             <img  src = {'../images/book5.jpg'}  class="img-fluid" alt="Responsive "/>
             <br/>
             <span>Magazines</span>
-         </div>
+         </div>  <p>Read whatever you like whenever you like</p><br/><br/><br/>
+
          <div className="col">
             <img  src = {'../images/book1.jpg'}  class="img-fluid" alt="Responsive "/>
             <br/>
