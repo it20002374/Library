@@ -10,7 +10,7 @@ const ItemSchema = new Schema({
 
     SubTitle : {
         type : String,
-        required : true
+        required : false
     },
 
     Author : {
@@ -20,7 +20,8 @@ const ItemSchema = new Schema({
 
     Quantity : {
         type : String,
-        required : true
+        required : true,
+        default: "1"
     },
 
     Price : {
@@ -30,7 +31,7 @@ const ItemSchema = new Schema({
 
     Description : {
             type : String,
-            required : true
+            required : false
     },
 
     // Images : [{

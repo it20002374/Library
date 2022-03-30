@@ -49,15 +49,16 @@ export default function AddItems(){
           setDescription(" ");
           setCategory(" ");
 
-          alert("Success")
         
-        //     Swal.fire({
-        //       title: "Good job!",
-        //       text: "You send the messege!",
-        //       icon: "success",
-        //       button: "ok!"
+        
+            Swal.fire({
+              title: "Good job!",
+              text: "You send the messege!",
+              icon: "success",
+              button: "ok!"
               
-        //   });
+          });
+          
         //   props.history.push("/Customer/Home");
           // window.location.reload();
           
