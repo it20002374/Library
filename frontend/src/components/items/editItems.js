@@ -107,6 +107,11 @@ export default function EditItems(){
     //     newdata[e.target.id] = e.target.value;
     //     setData(newdata);
 
+      //   function handle(e) {
+    //     const newdata = { ...data };
+    //     newdata[e.target.id] = e.target.value;
+    //     setData(newdata);
+
 
     return(
 
