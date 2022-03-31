@@ -13,7 +13,7 @@ router.route("/add").post((req, res) => {
   const Category = req.body.Category;
   const ItemAvailabilityStatus = req.body.ItemAvailabilityStatus;
   const Date = req.body.Date;
-  const CustomerID = req.body.CustomerID;
+  // const CustomerID = req.body.CustomerID;
 
   const newItem = new Item({
     Title,
@@ -26,7 +26,7 @@ router.route("/add").post((req, res) => {
     Category,
     ItemAvailabilityStatus,
     Date,
-    CustomerID
+    // CustomerID
   });
 
   newItem
@@ -45,7 +45,7 @@ router.route("/add").post((req, res) => {
           Category: newItem.Category,
           ItemAvailabilityStatus : newItem.ItemAvailabilityStatus,
           Date : newItem.Date,
-          CustomerID : newItem.CustomerID
+          // CustomerID : newItem.CustomerID
         },
       });
     })
@@ -71,27 +71,18 @@ router.route("/get").get((reg, res) => {
 router.route("/update/:id").put(async (req, res) => {
   let itemID = req.params.id;
   const {
-    Item_name,
-    SubTitle,
     Quantity,
     Price,
     Description,
-    // Images,
     Category,
-    ItemAvailabilityStatus,
-    CustomerID
   } = req.body;
 
   const updateItem = {
-    Item_name,
-    SubTitle,
+    
     Quantity,
     Price,
     Description,
-    // Images,
     Category,
-    ItemAvailabilityStatus,
-    CustomerID
   };
 
   const update = await Item.findByIdAndUpdate(itemID, updateItem)
