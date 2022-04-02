@@ -70,15 +70,6 @@ export default function AddItems(){
       
       }
 
-    //   function cancelCourse(){
-    //     this.refs.fieldName.value="";
-    //     this.refs.fieldorg.value="";
-    //     this.refs.fieldNum.value="";
-    //   }
-
-    //   cancelCourse = () => { 
-    //     document.getElementById("create-course-form").reset();
-    //   }
 
     return(
 
