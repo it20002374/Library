@@ -8,7 +8,7 @@ export default function Home(props) {
   return (
   <div className="container text-center">
       <br/>
-      <img src={'../images/h.jpg'} className="img-fluid" alt="Responsive "/>
+      <img src={'../images/home.jpg'} className="img-fluid" alt="Responsive "/>
      <br/><br/><br/>
 
      <p>Read whatever you like whenever you like</p><br/><br/><br/>

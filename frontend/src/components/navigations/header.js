@@ -6,7 +6,7 @@ function Header(){
     return(
         
         <div class="navigation">
-            <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top" style={{fontFamily: 'Rambla, sans-serif'}}>
+            <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top">
 
                 <a class="navbar-brand">
 
@@ -26,17 +26,17 @@ function Header(){
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto" style={{fontSize: '24px',fontFamily: 'Rambla, sans-serif',fontWeight: 'bold',color: '#3F3232'}}>
+                <ul class="navbar-nav ms-auto" style={{fontSize: '22px',fontWeight: 'bold',color: '#3F3232'}}>
 
-                    <li class="nav-item active" style={{ marginRight: '25px'}}>
-                    <a class="nav-link" href="/home"  id="overview">Home</a>
+                    <li class="nav-item" style={{ marginRight: '25px',}}>
+                    <a class="nav-link" href="/"  id="overview">Home</a>
                     </li>
                     
                     <li class="nav-item" style={{ marginRight: '25px'}}>
                     <a class="nav-link"  href="#" id="contactus">Contact Us</a>
                     </li>
                     <li class="nav-item" style={{ marginRight: '25px'}}>
-                    <a class="nav-link"  id="features">My Cart</a>
+                    <a class="nav-link" href="#" id="features">My Cart</a>
                     </li>
                     <li class="nav-item" style={{ marginRight: '25px'}}>
                     <button type="button" style={{ backgroundColor: '#F2AB39', border: 'none', width: '100px'}} class="btn btn-primary">Sign Out</button>
