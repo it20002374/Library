@@ -6,6 +6,8 @@ import Header from './components/navigations/header';
 import EditItems from './components/items/editItems';
 import Category from './components/customers/category';
 import StaffHome from './components/staff/staffHome';
+import AddCustomer from './components/customers/addCustomers';
+import EditCustomer from './components/customers/editCustomers';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
        <Route exact path="/edit" element={<EditItems/>} />
        <Route exact path="/category" element={<Category/>} />
        <Route exact path="/shome" element={<StaffHome/>} />
+       <Route exact path="/addCustomer" element={<AddCustomer/>} />
+       <Route exact path="/ediCustomer" element={<EditCustomer/>} />
      
        </Routes> 
      </Router>
