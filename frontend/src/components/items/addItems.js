@@ -66,7 +66,6 @@ export default function AddItems(){
           
           setErrorMsg(err.response.data.error);
         })
-      
       }
 
 
