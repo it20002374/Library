@@ -177,7 +177,7 @@ export default function AddItems(){
                         <span style={{float:'left', color : '#3FC1C9', fontWeight:'bold'}}>Fields with * is Compulsary !</span>
                     </div>
                     <div className="col-sm" style={{float:'right'}}>
-                    <button type="cancel" class="btn" style={{color:'#f5f5f5', backgroundColor:'#3FC1C9'}}>Clear</button>
+                    <button type="cancel" class="btn">Clear</button>
                     <button type="submit" class="btn" style={{color:'#f5f5f5', backgroundColor:'#F2AB39'}}>Submit</button>
                     </div>
                 </div>
