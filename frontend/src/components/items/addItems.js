@@ -59,8 +59,7 @@ export default function AddItems(){
               
           });
           
-        //   props.history.push("/Customer/Home");
-          // window.location.reload();
+
           
         }).catch((err) =>{
           alert(err)
