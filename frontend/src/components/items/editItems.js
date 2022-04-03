@@ -33,7 +33,7 @@ export default function EditItems(){
 
     useEffect(()=>{
         function getItems(){
-            axios.get("http://localhost:8070/items/get/623d9001e14fb57281e5ea5f")
+            axios.get("http://localhost:8070/items/get/623729699d9796c7d397cb8f")
             .then((res)=>{
                 console.log(res)
                 setItems(res.data)
@@ -78,7 +78,7 @@ export default function EditItems(){
 
       function updateItem(e) {
    
-        const objectId = "623d9001e14fb57281e5ea5f";
+        const objectId = "623729699d9796c7d397cb8f";
     
         e.preventDefault();
     
@@ -120,54 +120,54 @@ export default function EditItems(){
         
       }
     
-      function handle(e) {
-        const newdata = { ...data };
-        newdata[e.target.id] = e.target.value;
-        setData(newdata);
+    //   function handle(e) {
+    //     const newdata = { ...data };
+    //     newdata[e.target.id] = e.target.value;
+    //     setData(newdata);
 
-        // if(e.target.id == "Quantity"){
-        //     if(e.target.value > 100){
-        //       setErrorMsg("Quantity cannot be more than 100");
-        //       setSuccMsg("")
-        //       flag = 0;
-        //     //   setButtonStatus(true);
-        //     }else if(e.target.value <= 0){
-        //       setErrorMsg("Quantity cannot be less than 0");
-        //       setSuccMsg("")
-        //       flag = 0;
-        //     //   setButtonStatus(true);
-        //     }else if((e.target.value).length == 0){
+    //     // if(e.target.id == "Quantity"){
+    //     //     if(e.target.value > 100){
+    //     //       setErrorMsg("Quantity cannot be more than 100");
+    //     //       setSuccMsg("")
+    //     //       flag = 0;
+    //     //     //   setButtonStatus(true);
+    //     //     }else if(e.target.value <= 0){
+    //     //       setErrorMsg("Quantity cannot be less than 0");
+    //     //       setSuccMsg("")
+    //     //       flag = 0;
+    //     //     //   setButtonStatus(true);
+    //     //     }else if((e.target.value).length == 0){
       
-        //     }else if((e.target.value) > 0 && (e.target.value) < 200){
+    //     //     }else if((e.target.value) > 0 && (e.target.value) < 200){
             
-        //         setSuccMsg("All Set!")
-        //         setErrorMsg("");
-        //         flag = 1;
-        //         // setButtonStatus(false);
-        //       }else{
-        //       setErrorMsg("");
-        //       flag = 1;
-        //     //   setButtonStatus(false);
-        //     }
+    //     //         setSuccMsg("All Set!")
+    //     //         setErrorMsg("");
+    //     //         flag = 1;
+    //     //         // setButtonStatus(false);
+    //     //       }else{
+    //     //       setErrorMsg("");
+    //     //       flag = 1;
+    //     //     //   setButtonStatus(false);
+    //     //     }
             
-        //   } 
+    //     //   } 
           
-        //   if(e.target.id == "Price"){
-        //     if(e.target.value > 1000){
-        //       setError2Msg("Price cannot exceed 1000");
-        //       flag = 0;
-        //     //   setButtonStatus(true);
-        //     }else if(e.target.value <= 0){
-        //       setError2Msg("Price cannot be Zero or less");
-        //       flag = 0;
-        //     //   setButtonStatus(true);
-        //     }else{
-        //       setError2Msg("");
-        //       flag = 1;
-        //     //   setButtonStatus(false);
-        //     }
-        //   }
-      }
+    //     //   if(e.target.id == "Price"){
+    //     //     if(e.target.value > 1000){
+    //     //       setError2Msg("Price cannot exceed 1000");
+    //     //       flag = 0;
+    //     //     //   setButtonStatus(true);
+    //     //     }else if(e.target.value <= 0){
+    //     //       setError2Msg("Price cannot be Zero or less");
+    //     //       flag = 0;
+    //     //     //   setButtonStatus(true);
+    //     //     }else{
+    //     //       setError2Msg("");
+    //     //       flag = 1;
+    //     //     //   setButtonStatus(false);
+    //     //     }
+    //     //   }
+    //   }
 
 
     return(
@@ -205,7 +205,9 @@ export default function EditItems(){
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Rent Price  </label>
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         placeholder={items.Price} 
-                        onChange={(e) => handle(e)}
+                        onChange={(e) => {
+                            setPrice(e.target.value);
+                        }}
                         />
                     </div>
 
@@ -213,15 +215,25 @@ export default function EditItems(){
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Quantity </label>
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         placeholder={items.Quantity}
-                        onChange={(e) => handle(e)}
+                        onChange={(e) => {
+                            setQuantity(e.target.value);
+                        }}
                         />
                     </div>
 
                     <div class="col-sm">
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Category </label>
+                        {/* <select class="form-select" aria-label="Default select example" style={{border:'1px solid #3F3232'}}>
+                            <option selected>{items.Category}</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> */}
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         placeholder={items.Category}
-                       onChange={(e) => handle(e)}
+                       onChange={(e) => {
+                        setCategory(e.target.value);
+                       }}
                        />
                     </div>
                 </div>
@@ -232,7 +244,9 @@ export default function EditItems(){
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Description </label>
                         <textarea type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}} 
                         placeholder={items.Description}
-                        onChange={(e) => handle(e)}
+                        onChange={(e) => {
+                            setDescription(e.target.value);
+                        }}
                         />
                     </div>
                   

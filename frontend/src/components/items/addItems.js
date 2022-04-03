@@ -70,15 +70,6 @@ export default function AddItems(){
       
       }
 
-    //   function cancelCourse(){
-    //     this.refs.fieldName.value="";
-    //     this.refs.fieldorg.value="";
-    //     this.refs.fieldNum.value="";
-    //   }
-
-    //   cancelCourse = () => { 
-    //     document.getElementById("create-course-form").reset();
-    //   }
 
     return(
 
@@ -95,7 +86,7 @@ export default function AddItems(){
                         onChange={(e)=>{
                             setTitle(e.target.value);
                         }}
-                        
+                        required
                         />
                     </div>
                     <div className="col-sm">
@@ -103,14 +94,16 @@ export default function AddItems(){
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
                             setAuthor(e.target.value);
-                        }}/>
+                        }}
+                        required/>
                     </div>
                     <div className="col-sm">
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Date<span style={{color:'red'}}>*</span> </label>
                         <input type="date" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
                             setDate(e.target.value);
-                        }}/>
+                        }}
+                        required/>
                     </div>
                 </div>
                 <br/><br/>
@@ -120,21 +113,24 @@ export default function AddItems(){
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
                             setPrice(e.target.value);
-                        }}/>
+                        }}
+                        required/>
                     </div>
                     <div class="col-sm">
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Quantity <span style={{color:'red'}}>*</span></label>
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
                             setQuantity(e.target.value);
-                        }}/>
+                        }}
+                        required/>
                     </div>
                     <div class="col-sm">
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Category<span style={{color:'red'}}>*</span> </label>
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
                             setCategory(e.target.value);
-                        }}/>
+                        }}
+                        required/>
                     </div>
                 </div>
                 <br/><br/>
@@ -177,8 +173,8 @@ export default function AddItems(){
                         <span style={{float:'left', color : '#3FC1C9', fontWeight:'bold'}}>Fields with * is Compulsary !</span>
                     </div>
                     <div className="col-sm" style={{float:'right'}}>
-                    <button type="cancel" class="btn">Clear</button>
-                    <button type="submit" class="btn" style={{color:'#f5f5f5', backgroundColor:'#F2AB39'}}>Submit</button>
+                    <button type="cancel" class="btn" style={{backgroundColor:'#F2AB39',color:'#f5f5f5', fontWeight:'bold', width:'120px', float:'right'}}>Clear</button>
+                    <button type="submit" class="btn" style={{backgroundColor:'#3FC1C9',color:'#f5f5f5', fontWeight:'bold', width:'100px', float:'right', marginRight:'30px'}}>Submit</button>
                     </div>
                 </div>
             </form>
