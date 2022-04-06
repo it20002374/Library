@@ -75,6 +75,7 @@ export default function AddCustomer(){
                         // onChange={(e)=>{
                         //     setPrice(e.target.value);
                         // }}
+
                         required/>
                     </div>
                     <div class="col-sm-4">
