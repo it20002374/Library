@@ -11,6 +11,7 @@ export default function AddItems(){
     const[Quantity,setQuantity] = useState("");
     const[Price,setPrice] = useState("");
     const[Category,setCategory] = useState("");
+    const[Images,setImages] = useState("");
     const[Description,setDescription] = useState("");
     const[ItemAvailabilityStatus,setItemAvailabilityStatus] = useState("");
 
@@ -30,7 +31,7 @@ export default function AddItems(){
             Quantity,
             Price,
             Description,
-            // Images,
+            Images,
             Category,
             // CustomerID
         }
@@ -47,6 +48,7 @@ export default function AddItems(){
           setPrice(" ");
           setSubTitle(" ");
           setDescription(" ");
+          setImages(" ");
           setCategory(" ");
 
         
@@ -134,11 +136,12 @@ export default function AddItems(){
                 <br/><br/>
                 <div className="row">
                 <div class="col-sm">
-                        {/* <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Image </label>
-                        <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" style={{border:'1px solid #3F3232'}}
+                    <label for="formFile" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>Select a Cover Image </label>
+                    <input class="form-control" type="file" id="formFile" style={{border:'1px solid #3F3232'}}
                         onChange={(e)=>{
-                            setImage(e.target.value);
-                        }}/> */}
+                            setImages(e.target.value);
+                        }}/>
+                       
                     </div>
                     <div class="col-sm">
                         <label for="exampleInputEmail1" class="form-label" style={{color:'#3F3232', fontWeight:'bold'}}>SubTitle </label>
